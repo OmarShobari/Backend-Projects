@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "95926124-c3b4-4938-8132-66cb6172c4df",
+		"name": "assignment_7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28432134"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Omar Abdullah3\",\r\n    \"email\":\"o5@gmail.com\",\r\n    \"password\":\"pass3\",\r\n    \"confirmPassword\": \"pass3\",\r\n    \"age\":33,\r\n    \"gender\":\"male\",\r\n    \"phone\":\"01153473024\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/signUp"
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"omar.ex10@gmail.com\",\r\n  \"password\": \"pass10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "change pass",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"o3@gmail.com\",\r\n    \"password\":\"pass3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGIzYzU0ODY3ZDc3ZjFhYzVmZjJjMiIsImVtYWlsIjoib21hci5leDJAZ21haWwuY29tIiwiaWF0IjoxNzAzNjI1MDA5fQ.bFO4m5985Xm4w4cqV6jyqIkEprWG2NquC8pNhDd0reg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"updatedData\": {\r\n    \"username\": \"newUsername\",\r\n    \"email\": \"new@example.com\",\r\n    \"password\": \"newPassword\", \r\n    \"age\": 25, \r\n    \"gender\": \"male\", \r\n    \"phone\": \"1234567890\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGIzYzU0ODY3ZDc3ZjFhYzVmZjJjMiIsImVtYWlsIjoib21hci5leDJAZ21haWwuY29tIiwiaWF0IjoxNzAzNjI1MDA5fQ.bFO4m5985Xm4w4cqV6jyqIkEprWG2NquC8pNhDd0reg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user soft",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/soft"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n \"nameSubstring\": \"us\"\r\n,\"maxAge\" : 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"tv\",\r\n    \"content\":\"wooooooooooow\",\r\n    \"userId\":8\r\n     \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Task 1\",\r\n    \"description\": \"Description for Task 1\",\r\n    \"status\": \"toDo\",\r\n    \"assignTo\": \"658b3c7c867d77f1ac5ff2c8\",  \r\n    \"deadline\": \"2023-12-31T23:59:59Z\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/tasks/aaaaaaaaaaaaaa"
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/tasks/aaaaaaaaaaaaaa"
+					},
+					"response": []
+				},
+				{
+					"name": "get all tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Omar\",\r\n    \"email\":\"o@gmail.com\",\r\n    \"password\":\"u1\",\r\n    \"age\":18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/tasks/getAll"
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Omar\",\r\n    \"email\":\"o@gmail.com\",\r\n    \"password\":\"u1\",\r\n    \"age\":18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/tasks/getOne"
+					},
+					"response": []
+				},
+				{
+					"name": "deadline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/tasks/getDeadline"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
